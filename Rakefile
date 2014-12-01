@@ -7,3 +7,13 @@ desc "install phantomjs in a mac"
 task :phantom do
   sh "brew update && brew install phantomjs"
 end
+
+desc "run check_form_server"
+task :formserver do
+  sh "ruby check_form_server.rb"
+end
+
+desc "run check_form_client"
+task :formclient do
+  sh "ruby check_form_client.rb"
+end
