@@ -39,11 +39,11 @@ __END__
    </p>
    <p>
      <label for="under_16">Under 16</label>
-     <input type="radio" name="underage" value="under"
-            id="under_16" checked="checked"/>
+     <input type="radio" name="age" value="under"
+            id="under_16" >
      <label for="over_16">Over 16</label>
-     <input type="radio" name="overage" value="over"
-            id="over_16"/>
+     <input type="radio" name="age" value="over"
+            id="over_16">
    </p> 
    <p>
      <label for="consent">Consent Given?</label>
@@ -58,8 +58,7 @@ __END__
     <li id="Forename"> Forename: <%= params[:Forename]%> </li>
     <li id="Surname"> Surname: <%= params[:Surname] %> </li>
     <li id="title"> User title: <%= params[:user_title] %> </li>
-    <li id="under_16"> Underage 16: <%= params[:underage] %> </li>
-    <li id="over_16"> Overage 16: <%= params[:overage] %> </li>
+    <li id="age"> Age (under/over 16): <%= params[:age] %> </li>
     <li id="consent"> Consent: <%= params[:consent_checkbox] %> </li>
   </ul>
   <a href="/">Go back</a>
