@@ -8,5 +8,5 @@ session.visit "http://crguezl.github.io/selenium-examples/index.html"
 
 session.click_link "example1"
 
-session.save_page('example1.html')
+session.save_page('example1_download.html')
 
