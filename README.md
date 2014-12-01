@@ -5,3 +5,4 @@ Capybara starts a browser. This can be a real browser (Firefox via selenium-webd
 
 * Section [Pruebas. Capybara y Cucumber](http://crguezl.github.io/apuntes-ruby/) in the LPP/SYTW subjects notes
 * [Automate tasks on the web with Ruby and Capybara](https://www.amberbit.com/blog/2014/2/12/automate-tasks-on-the-web-with-ruby-and-capybara/)
+* [Cucumber + CapyBara + Poltergeist: Rockstar BDD Combo](http://shashikantjagtap.net/cucumber-capybara-poltergeist-rockstar-bdd-combo/) by Shashikant Jagtap
