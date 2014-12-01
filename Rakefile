@@ -1,6 +1,6 @@
 desc "run hello_lpp_dsl without warnings"
 task :hello_dsl do
-  sh "ruby -W0 hello_lpp_dsl.rb"
+  sh "ruby -W0 hello_lpp_dsl.rb" 
 end
 
 desc "install phantomjs in a mac"
@@ -16,4 +16,9 @@ end
 desc "run check_form_client"
 task :formclient do
   sh "ruby check_form_client.rb"
+end
+
+desc "delete generated files" 
+task :clean do
+  sh "rm -f formfilled.pdf example1_download.html"
 end

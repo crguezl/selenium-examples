@@ -11,7 +11,7 @@ session.instance_eval do
   fill_in 'Surname', :with => 'Rodríguez'
   click_on 'Go'
 
-  puts body # dump the contents of the page
+  save_screenshot("formfilled.pdf")
   f = find('#Forename') # f is  a Capybara::Element object
   puts "****\nForename = #{f.text}" 
   s = find('#Surname')
