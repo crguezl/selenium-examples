@@ -12,6 +12,10 @@ session.instance_eval do
   click_on 'Go'
 
   puts body # dump the contents of the page
+  f = find('#Forename') # f is  a Capybara::Element object
+  puts "****\nForename = #{f.text}" 
+  s = find('#Surname')
+  puts "****\nSurname = #{s.text}"
 end
 
 

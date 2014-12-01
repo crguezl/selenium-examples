@@ -34,7 +34,7 @@ __END__
 
 @@result
   <ul>
-    <li> <%= params[:Forename]%>
-    <li> <%= params[:Surname] %>
+    <li id="Forename"> <%= params[:Forename]%>
+    <li id="Surname"> <%= params[:Surname] %>
   </ul>
   <a href="/">Go back</a>
