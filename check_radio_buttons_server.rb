@@ -9,7 +9,7 @@ end
 post '/' do
   pp params
   File.open("public/image.png", "w") do |f|
-    f.write(params['image'][:tempfile].read)
+    f.write(params['image'][:tempfile].read) if f.size < (1 << 16)
   end
   erb :result, :locals => { :params => params }
 end

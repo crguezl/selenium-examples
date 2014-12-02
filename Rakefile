@@ -18,7 +18,17 @@ task :formclient do
   sh "ruby check_form_client.rb"
 end
 
+desc "run check_radio_buttons_server"
+task :radioserver do
+  sh "ruby check_radio_buttons_server.rb"
+end
+
+desc "run check_radio_buttons_client"
+task :radioclient do
+  sh "ruby check_radio_buttons_client.rb"
+end
+
 desc "delete generated files" 
 task :clean do
-  sh "rm -f formfilled.pdf example1_download.html"
+  sh "rm -f formfilled.pdf example1_download.html public/image.png"
 end
