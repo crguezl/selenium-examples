@@ -1,11 +1,16 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
+require 'pp'
 
 get '/' do
   erb :index
 end
 
 post '/' do
+  pp params
+  File.open("public/image.png", "w") do |f|
+    f.write(params['image'][:tempfile].read)
+  end
   erb :result, :locals => { :params => params }
 end
 
@@ -24,7 +29,7 @@ __END__
 </html>
 
 @@index
-<form id="myform" method="post" action="/">
+<form id="myform" method="post" action="/" enctype="multipart/form-data">
    <label for="name1">User Forename</label>
    <input id="name1" type="text" name="Forename" value="" />
    <label for="name2">User Surname</label>
@@ -50,6 +55,10 @@ __END__
      <input type="checkbox" value="yes" name="consent_checkbox"
                 id="consent"/>
    </p>
+   <p>
+     <label for="form_image">Image (.png)</label>
+     <input type="file" name="image" id="form_image"/>
+   </p>
    <input type="submit" value="Go" />
 </form>
 
@@ -60,5 +69,6 @@ __END__
     <li id="title"> User title: <%= params[:user_title] %> </li>
     <li id="age"> Age (under/over 16): <%= params[:age] %> </li>
     <li id="consent"> Consent: <%= params[:consent_checkbox] %> </li>
+    <li id="image"><img src="/image.png" /></li>
   </ul>
   <a href="/">Go back</a>
